@@ -32,7 +32,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"No valid values detected",Toast.LENGTH_LONG);
 
                 }
-               //Fix this
+               else {
+                    weight = Double.parseDouble(field_weight.getText().toString());
+                    dose = Double.parseDouble(field_dose.getText().toString());
+                     result = (dose*weight)/2;
+
+                    view_result.setText(String.valueOf(result));
+                    view_msg.setText(msg);
+                }
             }
         });
     }
